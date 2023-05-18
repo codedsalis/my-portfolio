@@ -10,7 +10,7 @@ export default function Page() {
   console.log("Page Rendered...");
   return (
     <div className="h-screen bg-AAprimary flex items-center justify-center">
-      <button onClick={() => getText()} className="text-AAsecondary px-8 py-2 border-2 border-AAsecondary rounded">
+      <button onClick={() => getText()} className="text-blue px-8 py-2 border-2 border-blue rounded">
         Test
       </button>
     </div>

@@ -1,4 +1,4 @@
-import React, { useContext,useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import cookieCutter from "cookie-cutter";
@@ -84,18 +84,26 @@ export default function Page() {
 
   // useEffect to clear others projects
   useEffect(() => {
-  // remove the interval Cookie timer setter when
-  if (typeof window !== "undefined") {
-    // remove Typing project EventListeners
-    window.removeEventListener("resize", context.sharedState.typing.eventInputLostFocus);
-    document.removeEventListener("keydown", context.sharedState.typing.keyboardEvent);
-    // remove Portfolio project NavBar EventListeners
-    window.removeEventListener("scroll", context.sharedState.portfolio.NavBar.IntervalEvent);
-    context.sharedState.portfolio.NavBar.IntervalEvent = null;
-    context.sharedState.portfolio.NavBar.scrolling = null;
-    context.sharedState.portfolio.NavBar.scrollSizeY = null;
-
-  }
+    // remove the interval Cookie timer setter when
+    if (typeof window !== "undefined") {
+      // remove Typing project EventListeners
+      window.removeEventListener(
+        "resize",
+        context.sharedState.typing.eventInputLostFocus
+      );
+      document.removeEventListener(
+        "keydown",
+        context.sharedState.typing.keyboardEvent
+      );
+      // remove Portfolio project NavBar EventListeners
+      window.removeEventListener(
+        "scroll",
+        context.sharedState.portfolio.NavBar.IntervalEvent
+      );
+      context.sharedState.portfolio.NavBar.IntervalEvent = null;
+      context.sharedState.portfolio.NavBar.scrolling = null;
+      context.sharedState.portfolio.NavBar.scrollSizeY = null;
+    }
   }, [context.sharedState]);
 
   // import Dynamically the Map component from the DataPuller package, cus it's using some client side objects
@@ -111,12 +119,13 @@ export default function Page() {
           httpEquiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         ></meta>
+        <title>Visitor Information</title>
       </Head>
       <div className="min-h-screen w-full bg-AAprimary text-white 2xl:px-64 xl:px-44 lg:px-24 md:px-16 px-4 ">
         <div className="h-full w-full  py-16 sm:px-12">
           {/* // ? Ip Address, (Latitude & Longitude) ==> only > md */}
           <div className="w-full pb-6 flex md:flex-row flex-col space-y-4 justify-around items-center">
-            <span className="font-bold md:text-4xl text-lg text-AAsecondary">
+            <span className="font-bold md:text-4xl text-lg text-blue">
               <span className="text-white hover:cursor-pointer">IP :</span>{" "}
               {userData.current?.query || "Checking..."}
             </span>
@@ -180,12 +189,12 @@ export default function Page() {
                     <span className="text-gray-200 font-semibold flex-none w-32 text-sm md:text-base">
                       Window size :
                     </span>
-                    <span className="text-AAsecondary font-semibold  text-sm md:text-base">
-                      <span ref={windowWidth} className="text-AAsecondary">
+                    <span className="text-blue font-semibold  text-sm md:text-base">
+                      <span ref={windowWidth} className="text-blue">
                         {userData.current?.screenWidth || ""}
                       </span>
                       <span className="text-gray-300"> x </span>
-                      <span ref={windowHeight} className="text-AAsecondary">
+                      <span ref={windowHeight} className="text-blue">
                         {userData.current?.screenHeight || ""}
                       </span>
                     </span>
@@ -195,13 +204,13 @@ export default function Page() {
                     <span className="text-gray-200 font-semibold flex-none w-36 text-sm md:text-base">
                       Mouse position :
                     </span>
-                    <span className="text-AAsecondary font-semibold text-sm md:text-base">
+                    <span className="text-blue font-semibold text-sm md:text-base">
                       <span className="text-gray-300">X - </span>
-                      <span ref={mouseX} className="text-AAsecondary">
+                      <span ref={mouseX} className="text-blue">
                         {0}
                       </span>
                       <span className="text-gray-300">, Y - </span>
-                      <span ref={mouseY} className="text-AAsecondary">
+                      <span ref={mouseY} className="text-blue">
                         {0}
                       </span>
                     </span>
@@ -226,17 +235,11 @@ export default function Page() {
                 <div className="w-full flex flex-col space-y-2 items-center">
                   <div className="flex flex-row space-x-1 text-sm">
                     <span className="">First visit :</span>
-                    <span
-                      ref={firstVisit_Ref}
-                      className="text-AAsecondary"
-                    ></span>
+                    <span ref={firstVisit_Ref} className="text-blue"></span>
                   </div>
                   <div className="flex flex-row space-x-1 text-sm">
                     <span className="">Last visit :</span>
-                    <span
-                      ref={lastVisit_Ref}
-                      className="text-AAsecondary"
-                    ></span>
+                    <span ref={lastVisit_Ref} className="text-blue"></span>
                   </div>
                 </div>
               </div>
@@ -247,7 +250,7 @@ export default function Page() {
                   } absolute h-full w-full border-[1px] border-white z-10 flex justify-center items-center`}
                 >
                   <div className="flex flex-col space-y-2 items-center">
-                    <Loader className="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-AAsecondary" />
+                    <Loader className="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue" />
                     <span className="">Updating location...</span>
                   </div>
                 </div>
@@ -274,7 +277,7 @@ export default function Page() {
                       setZipCode
                     );
                   }}
-                  className="text-AAsecondary underline text-sm hover:cursor-pointer"
+                  className="text-blue underline text-sm hover:cursor-pointer"
                 >
                   Update My IP Location
                 </span>
@@ -302,7 +305,7 @@ export default function Page() {
         {/* // ? About */}
         <About />
       </div>
-      <Footer githubUrl="https://github.com/hktitof/DataPuller" hideSocialsInDesktop={false} />
+      <Footer hideSocialsInDesktop={false} />
     </>
   );
 }
