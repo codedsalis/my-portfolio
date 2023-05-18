@@ -83,6 +83,7 @@ export default function SomethingIveBuilt() {
                 <a
                   href="https://wassapviews.com"
                   target="_blank"
+                  rel="noreferrer"
                   className=" md:text-gray-200 text-blue font-bold text-xl hover:cursor-pointer"
                 >
                   WassapViews
@@ -100,7 +101,7 @@ export default function SomethingIveBuilt() {
                   eventually download the compiled contacts (in VCF format), the
                   VCF file automatically extracts the compiled contacts and
                   saves them to their phone book which makes it possible for the
-                  people in the compiled list to view each others' WhatsApp
+                  people in the compiled list to view each others&apos; WhatsApp
                   statuses
                 </p>
               </div>
@@ -136,7 +137,11 @@ export default function SomethingIveBuilt() {
           absolute md:grid grid-cols-12 w-full h-full  content-center"
           >
             <div className="relative rounded w-full h-full col-span-7 ">
-              <a href="https://www.selstack.com" target="_blank">
+              <a
+                href="https://www.selstack.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div
                   // onClick={}
                   className="absolute w-full h-full rounded bg-blue 
@@ -172,7 +177,11 @@ export default function SomethingIveBuilt() {
             col-span-8 flex flex-col items-start md:items-end space-y-3"
             >
               <div className="flex flex-col space-y-1 md:items-end z-10">
-                <a href="https://www.selstack.com" target="_blank">
+                <a
+                  href="https://www.selstack.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span className=" md:text-gray-200 text-blue font-bold text-xl hover:cursor-pointer">
                     Selstack
                   </span>

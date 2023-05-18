@@ -26,7 +26,8 @@ export default function GetInTouch() {
       </span>
       <p className="flex font-Header tracking-wider text-gray-400 text-center px-6 sm:px-16 md:px-0 md:w-[600px]">
         Do you have any job or gig for me, you think we could work together?
-        Kindly shoot me a message and I'll get back to you as soon as possible
+        Kindly shoot me a message and I&apos;ll get back to you as soon as
+        possible
       </p>
       <div className="pt-4">
         <a href="mailto:talitu6@gmail.com" target={"_blank"} rel="noreferrer">

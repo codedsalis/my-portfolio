@@ -66,18 +66,19 @@ export default function AboutMe(props) {
               <span className="text-gray-400  tracking-wide">
                 Hello! My name is Kadiri Talitu and I enjoy solving problems
                 with code. I love the idea of helping people bring their
-                business ideas online and I've been doing just that for some
-                years. My interest in programming started back in 2011 when I
-                just learned how to browse the internet. I had stumbled upon an
-                ad that says "Create your own website" and I instantly picked
-                interest in the idea, wondering about all the possibilities. I
-                learned a lot on my own, built some really exciting test
-                projects and then went on to study Computer Science
+                business ideas online and I&apos;ve been doing just that for
+                some years. My interest in programming started back in 2011 when
+                I just learned how to browse the internet. I had stumbled upon
+                an ad that says &quot;Create your own website&quot; and I
+                instantly picked interest in the idea, wondering about all the
+                possibilities. I learned a lot on my own, built some really
+                exciting test projects and then went on to study Computer
+                Science
               </span>
             </div>
             <div className="font-Header tracking-wide">
               <span className="text-gray-400  ">
-                Fast-forward to today, I've had the privilege of working at
+                Fast-forward to today, I&apos;ve had the privilege of working at
                 <span className="text-blue"> a start-up</span> as both a{" "}
                 <span className="text-blue">
                   Chief Technology Officer and a Co-founder
@@ -94,7 +95,7 @@ export default function AboutMe(props) {
 
             <div className="font-Header tracking-wide">
               <span className="text-gray-400 text-lg">
-                Here are a few technologies I've been working with
+                Here are a few technologies I&apos;ve been working with
               </span>
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
