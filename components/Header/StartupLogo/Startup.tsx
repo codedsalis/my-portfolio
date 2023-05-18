@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "../../smallComp/image/Img";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 const Startup = (props) => {
   let WidthBy2 = 0;
@@ -114,7 +115,7 @@ const Startup = (props) => {
           transition={{ scale: { delay: 0.5, duration: 1.5 } }}
           className="text-blue font-Text2 text-4xl"
         >
-          <img
+          <Img
             src="/img/headshot.png"
             height="50"
             width="50"
