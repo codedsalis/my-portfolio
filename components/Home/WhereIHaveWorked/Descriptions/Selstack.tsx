@@ -26,7 +26,7 @@ export default function Selstack() {
           </span>
           {/* Date */}
           <span className="font-mono text-xs text-gray-500">
-            March 2021 - February 2023
+            March 2021 - December 2023
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
