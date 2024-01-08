@@ -4,6 +4,7 @@ import ArrowIcon from "../../Icons/ArrowIcon";
 import CrescentUniversity from "./Descriptions/CrescentUniversity";
 import Selstack from "./Descriptions/Selstack";
 import AfriAdverts from "./Descriptions/AfriAdverts";
+import WassapTech from "./Descriptions/WassapTech";
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
@@ -14,6 +15,8 @@ export default function WhereIHaveWorked() {
         return <CrescentUniversity />;
       case "Selstack":
         return <Selstack />;
+      case "WassapTech":
+        return <WassapTech />;
       case "AfriAdverts":
         return <AfriAdverts />;
     }
@@ -92,7 +95,7 @@ const CompaniesBar = (props) => {
     >
       {/* // ? left bar Holder */}
       <div
-        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-32 translate-y-1 md:w-0.5  
+        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-40 translate-y-1 md:w-0.5  
         rounded md:order-1 order-2"
       >
         {/* // ? animated left bar */}
@@ -125,11 +128,20 @@ const CompaniesBar = (props) => {
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="AfriAdverts"
+            CompanyName="Wassap Tech Global"
             BarPosition={80}
             BarAvobePosition={257}
+            DescriptionJob="WassapTech"
+            CompanyNameBackgroundColorGreen={[false, false, true, false]}
+            setDescriptionJob={props.setDescriptionJob}
+          />
+          <CompanyButton
+            ButtonOrderOfcompanyNameBackgroundColorGreen={3}
+            CompanyName="AfriAdverts"
+            BarPosition={124}
+            BarAvobePosition={385}
             DescriptionJob="AfriAdverts"
-            CompanyNameBackgroundColorGreen={[false, false, true]}
+            CompanyNameBackgroundColorGreen={[false, false, false, true]}
             setDescriptionJob={props.setDescriptionJob}
           />
         </div>
