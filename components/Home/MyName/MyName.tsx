@@ -76,8 +76,8 @@ export default function MyName(props: { finishedLoading: boolean }) {
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
-        I&apos;m Talitu Kadiri, a{" "}
-        <span className="text-blue">software developer</span> who specializes in
+        I am Talitu Kadiri, a{" "}
+        <span className="text-blue">Software Engineer</span> who specializes in
         creating <span className="text-blue">well-engineered</span>,{" "}
         <span className="text-blue">well-designed</span> and{" "}
         <span className="text-blue">user-friendly</span> applications. My
