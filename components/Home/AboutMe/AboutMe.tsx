@@ -39,7 +39,7 @@ export default function AboutMe(props) {
     >
       {/* // ? 0.1 About Me */}
       <div
-        className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px] 
+        className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px]
         md:w-[700px] lg:w-[900px] "
       >
         <div className="flex flex-row items-center ">
@@ -68,9 +68,9 @@ export default function AboutMe(props) {
                 Hello! My name is Kadiri Talitu and I enjoy solving problems
                 with code. I love the idea of helping people bring their
                 business ideas online and I&apos;ve been doing just that for
-                some years. My interest in programming started back in 2011 when
-                I just learned how to browse the internet. I had stumbled upon
-                an ad that says &quot;Create your own website&quot; and I
+                some years now. My interest in programming started back in 2011
+                when I just learned how to browse the internet. I had stumbled
+                upon an ad that says &quot;Create your own website&quot; and I
                 instantly picked interest in the idea, wondering about all the
                 possibilities. I learned a lot on my own, built some really
                 exciting test projects and then went on to study Computer
@@ -84,19 +84,21 @@ export default function AboutMe(props) {
                 <span className="text-blue">
                   Chief Technology Officer and a Co-founder
                 </span>
-                , <span className="text-blue">an Ad network</span>, also
-                <span className="text-blue"> freelancing</span> and recently as
-                a <span className="text-blue">System Engineer</span> at
-                <span className="text-blue"> a University</span>. <br />
-                <br />I am mainly into Mobile & Web Development, lately with
-                Desktop Development. My main focus these days is improving the
-                quality of my works.
+                , <span className="text-blue">an Ad network</span>, a{" "}
+                <span className="text-blue">System Engineer</span> at
+                <span className="text-blue"> a University</span>, and currently
+                as a <span className="text-blue">Senior Software Engineer</span>{" "}
+                <br />
+                <br />
+                My main focus these days is improving the quality of my works,
+                how to build for scalability and maintainability to ensure that
+                businesses keep making money with the software I build.
               </span>
             </div>
 
             <div className="font-Header tracking-wide">
               <span className="text-gray-400 text-lg">
-                Here are a few technologies I&apos;ve been working with
+                Here are few technologies I&apos;ve been working with
               </span>
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
@@ -140,7 +142,7 @@ export default function AboutMe(props) {
           <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">
             <div
               className="group-hover:translate-x-3 group-hover:translate-y-3
-               duration-300 absolute w-5/6 h-5/6 border-2 border-blue translate-x-5 
+               duration-300 absolute w-5/6 h-5/6 border-2 border-blue translate-x-5
                translate-y-5 rounded"
             ></div>
 

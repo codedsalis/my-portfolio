@@ -5,12 +5,15 @@ import CrescentUniversity from "./Descriptions/CrescentUniversity";
 import Selstack from "./Descriptions/Selstack";
 import AfriAdverts from "./Descriptions/AfriAdverts";
 import WassapTech from "./Descriptions/WassapTech";
+import Zojatech from "./Descriptions/Zojatech";
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
+      case "Zojatech":
+        return <Zojatech />;
       case "CrescentUniversity":
         return <CrescentUniversity />;
       case "Selstack":
@@ -21,8 +24,7 @@ export default function WhereIHaveWorked() {
         return <AfriAdverts />;
     }
   };
-  const [DescriptionJob, setDescriptionJob] =
-    React.useState("CrescentUniversity");
+  const [DescriptionJob, setDescriptionJob] = React.useState("Zojatech");
   return (
     <div
       data-aos="fade-up"
@@ -67,11 +69,11 @@ const CompaniesBar = (props) => {
           setBarAbovePosition(props.BarAvobePosition);
           props.setDescriptionJob(props.DescriptionJob);
           setCompanyNameBackgroundColorGreen(
-            props.CompanyNameBackgroundColorGreen
+            props.CompanyNameBackgroundColorGreen,
           );
         }}
         className={`flex-none sm:text-sm text-xs text-center md:text-left  hover:text-blue
-             hover:bg-ResumeButtonHover rounded  font-mono  
+             hover:bg-ResumeButtonHover rounded  font-mono
              py-3 md:pl-3 px-3 md:pr-3 md:w-full w-fit duration-500
              ${
                companyNameBackgroundColorGreen[
@@ -89,13 +91,13 @@ const CompaniesBar = (props) => {
   return (
     <div
       id="WhereIhaveWorkedSection"
-      className=" flex flex-col md:flex-row  w-screen md:w-auto 
+      className=" flex flex-col md:flex-row  w-screen md:w-auto
       overflow-auto scrollbar-hide md:overflow-hidden pb-4 md:pb-0 justify-start
        sm:justify-center items-start sm:items-center"
     >
       {/* // ? left bar Holder */}
       <div
-        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-40 translate-y-1 md:w-0.5  
+        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-52 translate-y-1 md:w-0.5
         rounded md:order-1 order-2"
       >
         {/* // ? animated left bar */}
@@ -110,38 +112,47 @@ const CompaniesBar = (props) => {
         <div className="flex flex-row md:flex-col">
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={0}
-            CompanyName="Crescent University"
+            CompanyName="Zojatech"
             BarPosition={-8}
             BarAvobePosition={1}
-            DescriptionJob="CrescentUniversity"
-            CompanyNameBackgroundColorGreen={[true, false, false]}
+            DescriptionJob="Zojatech"
+            CompanyNameBackgroundColorGreen={[true, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
-            CompanyName="Selstack"
-            BarPosition={36}
-            BarAvobePosition={129}
-            DescriptionJob="Selstack"
-            CompanyNameBackgroundColorGreen={[false, true, false]}
+            CompanyName="Crescent University"
+            BarPosition={30}
+            BarAvobePosition={1}
+            DescriptionJob="CrescentUniversity"
+            CompanyNameBackgroundColorGreen={[false, true, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="Wassap Tech Global"
-            BarPosition={80}
-            BarAvobePosition={257}
-            DescriptionJob="WassapTech"
-            CompanyNameBackgroundColorGreen={[false, false, true, false]}
+            CompanyName="Selstack"
+            BarPosition={75}
+            BarAvobePosition={129}
+            DescriptionJob="Selstack"
+            CompanyNameBackgroundColorGreen={[false, false, true, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={3}
+            CompanyName="Wassap Tech Global"
+            BarPosition={120}
+            BarAvobePosition={257}
+            DescriptionJob="WassapTech"
+            CompanyNameBackgroundColorGreen={[false, false, false, true, false]}
+            setDescriptionJob={props.setDescriptionJob}
+          />
+          <CompanyButton
+            ButtonOrderOfcompanyNameBackgroundColorGreen={4}
             CompanyName="AfriAdverts"
-            BarPosition={124}
+            BarPosition={170}
             BarAvobePosition={385}
             DescriptionJob="AfriAdverts"
-            CompanyNameBackgroundColorGreen={[false, false, false, true]}
+            CompanyNameBackgroundColorGreen={[false, false, false, false, true]}
             setDescriptionJob={props.setDescriptionJob}
           />
         </div>
